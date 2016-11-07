@@ -11,6 +11,21 @@
         <div id='innerdiv' name='div2' data-info='bar' class='box2'>
             <p id='t1' onclick='alert("Read more books")'>Welcome to our Book Store</p>
             <p id='t2'>Buy more books - now!</p>
+            <p id='t3'>Welcome to our Book Store</p>
+ 			
+ 			<script type="text/javascript">
+    			var func1 = function func1(){
+       			if (document.getElementById('t3').innerHTML === "Welcome to our Book Store") 
+       				{
+       					document.getElementById('t3').innerHTML = "Read More Books";
+       				} 
+       				else 
+       				{
+       					document.getElementById('t3').innerHTML = "Welcome to our Book Store";
+       				}
+    			}
+    			document.getElementById('t3').onclick = func1;
+ 			</script>
         </div>
     </div>
 </body>
