@@ -12,7 +12,8 @@
             <p id='t1' onclick='alert("Read more books")'>Welcome to our Book Store</p>
             <p id='t2'>Buy more books - now!</p>
             <p id='t3'>Welcome to our Book Store</p>
- 			
+ 	<div id="someID"></div>
+
  			<script type="text/javascript">
     			var func1 = function func1(){
        			if (document.getElementById('t3').innerHTML === "Welcome to our Book Store") 
@@ -25,6 +26,19 @@
        				}
     			}
     			document.getElementById('t3').onclick = func1;
+ 			document.getElementById('outerdiv').style.backgroundColor = "aqua";
+ 			
+ 			var btn = document.createElement('button');
+ 			document.getElementById('someID').appendChild(btn);
+ 			btn.appendChild(document.createTextNode("Text for the Button!"))
+
+ 			function btnCopy() {
+ 				btn = document.createElement('button');
+ 				btn.appendChild(document.createTextNode("HEY!"));
+ 				btn.onclick = btnCopy;
+ 				document.getElementById("someID").appendChild(btn);
+ 			} 
+ 			btn.onclick = btnCopy;
  			</script>
         </div>
     </div>
